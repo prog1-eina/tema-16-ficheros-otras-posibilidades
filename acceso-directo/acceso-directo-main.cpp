@@ -49,8 +49,8 @@ int leerUnPrimo_secuencial(const char nombreFichero[], int i) {
 int leerUnPrimo(const char nombreFichero[], int i) {
     ifstream f(nombreFichero, ios::binary);
     if (f.is_open()) {
-        int primo;
         f.seekg((i - 1) * sizeof(int));
+        int primo;
         f.read(reinterpret_cast<char*>(&primo), sizeof(primo));
         f.close();
         return primo;
