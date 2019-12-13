@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="tema-16-ficheros-otras-posibilidades" Database="" Version="10.0.0">
   <Project Name="01-linea-adicional" Path="linea-adicional/linea-adicional.project" Active="No"/>
-  <Project Name="02-acceso-directo" Path="acceso-directo/acceso-directo.project" Active="Yes"/>
+  <Project Name="02-acceso-directo" Path="acceso-directo/acceso-directo.project" Active="No"/>
+  <Project Name="03-lectura-escritura" Path="lectura-escritura/lectura-escritura.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="01-linea-adicional" ConfigName="Debug"/>
       <Project Name="02-acceso-directo" ConfigName="Debug"/>
+      <Project Name="03-lectura-escritura" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="01-linea-adicional" ConfigName="Release"/>
       <Project Name="02-acceso-directo" ConfigName="Release"/>
+      <Project Name="03-lectura-escritura" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
