@@ -8,8 +8,6 @@
 \********************************************************************************/
 #include <iostream>
 #include <fstream>
-#include <cstdio>
-#include "../../Biblioteca/nif.h"
 using namespace std;
 
 
@@ -17,45 +15,61 @@ using namespace std;
  * Pre:  El fichero de nombre «nombreFichero» almacena al menos los primeros
  *       «i» números primos, almacenados en orden ascendente.
  * Post: Ha devuelto el «i»-ésimo (comenzando a contar por 1) número primo, 
- *       según el contenido del fichero.
+ *       según el contenido del fichero. Si no se ha podido abrir el fichero, ha
+ *       escrito un mensaje de error en «cerr» y ha devuelto un valor negativo.
  * Nota: Versión secuencial de la función
  */
-void leerUnNifBin_versionSecuencial(const char nombreFichero[], int i, Nif& nif) {
+int leerUnPrimo_secuencial(const char nombreFichero[], int i) {
     ifstream f(nombreFichero, ios::binary);
     if (f.is_open()) {
-        int n;
-        f.read(reinterpret_cast<char*>(&n), sizeof(n));
-        for(int j = 0; j < i; j++) {
-            f.read(reinterpret_cast<char*>(&nif), sizeof(nif));
+        int primo;
+        for(int j = 1; j <= i; j++) {
+            f.read(reinterpret_cast<char*>(&primo), sizeof(primo));
         }
         f.close();
+        return primo;
     }
     else {
         // Escritura de un mensaje de error si no se ha podido abrir el fichero
         cerr << "No se ha podido leer el fichero \""
              << nombreFichero << "\"" << endl;
+        return -1;
+    }
+}
+
+
+/*
+ * Pre:  El fichero de nombre «nombreFichero» almacena al menos los primeros
+ *       «i» números primos, almacenados en orden ascendente.
+ * Post: Ha devuelto el «i»-ésimo (comenzando a contar por 1) número primo, 
+ *       según el contenido del fichero. Si no se ha podido abrir el fichero, ha
+ *       escrito un mensaje de error en «cerr» y ha devuelto un valor negativo.
+ * Nota: Versión de la función que utiliza acceso directo.
+ */
+int leerUnPrimo(const char nombreFichero[], int i) {
+    ifstream f(nombreFichero, ios::binary);
+    if (f.is_open()) {
+        int primo;
+        f.seekg((i - 1) * sizeof(int));
+        f.read(reinterpret_cast<char*>(&primo), sizeof(primo));
+        f.close();
+        return primo;
+    }
+    else {
+        // Escritura de un mensaje de error si no se ha podido abrir el fichero
+        cerr << "No se ha podido leer el fichero \""
+             << nombreFichero << "\"" << endl;
+        return -1;
     }
 }
 
 /*
- * Pre:  El de fichero de nombre «nombreFichero» almacena la siguiente
- *       información codificada en binario que representa una secuencia
- *       de NIF: En primer lugar el número de NIF almacenados en el
- *       fichero; este número es mayor que cero y mayor que «i». Le sigue
- *       una secuencia de datos de tipo «Nif».
- * Post: Asigna a «nif» el NIF «i»-ésimo almacenado en el fichero.
- * Nota: Versión de la función que utiliza acceso directo.
+ * Programa de prueba de la función «leerUnPrimo», que escribe el valor del
+ * milésimo número primo (7919).
  */
-void leerUnNifBin(const char nombreFichero[], int i, Nif& nif) {
-    ifstream f(nombreFichero, ios::binary);
-    if (f.is_open()) {
-        f.seekg(sizeof(int) + (i - 1) * sizeof(Nif));
-        f.read(reinterpret_cast<char*>(&nif), sizeof(nif));
-    }
-    else {
-        // Escritura de un mensaje de error si no se ha podido abrir el fichero
-        cerr << "No se ha podido leer el fichero \""
-             << nombreFichero << "\"" << endl;
-    }
+int main() {
+    const char NOMBRE_FICHERO[] = "../../../tema-15-ficheros-binarios/creacion-fichero-primos/primos.dat";
+    cout << leerUnPrimo(NOMBRE_FICHERO, 1000) << endl;
+    return 0;
 }
 
