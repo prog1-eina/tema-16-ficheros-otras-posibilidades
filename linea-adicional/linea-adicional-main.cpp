@@ -16,7 +16,7 @@ using namespace std;
  * Pre:  «nombreFichero» hace referencia a un fichero de texto existente y
  *       modificable.
  * Post: Inserta al final del fichero de denominado «nombreFichero» una línea
- *       completa cuyo contenido sea la secuencia de caracteres de «linea».
+ *       completa cuyo contenido sea la cadena de caracteres «linea».
  * Nota: Esta versión no utiliza el modo «append».
  */
 void unaLineaAdicional_sinModoAppend(const char nombreFichero[],
