@@ -14,7 +14,8 @@ using namespace std;
 
 /*
  * Pre:  El fichero de nombre «nombreFichero» contiene los primeros números
- *       primos, almacenados en orden ascendente.
+ *       primos, almacenados en orden ascendente. El fichero contiene al menos 
+ *       dos primos.
  * Post: Ha añadido al fichero el número primo que sigue al último que tenía
  *       inicialmente almacenado. Si no ha podido, ha escrito un mensaje de error
  *       en «cerr».
@@ -32,7 +33,7 @@ void agregarSiguientePrimo(const char nombreFichero[]) {
             primo += 2;
         }
         
-        f.seekp(0, ios_base::end);    // No es estrictamente necesario
+        f.seekp(0, ios_base::end);
         f.write(reinterpret_cast<const char*>(&primo), sizeof(primo));
         f.close();
     }
