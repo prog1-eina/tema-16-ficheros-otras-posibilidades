@@ -1,0 +1,74 @@
+{
+    "tasks": [
+        {
+            "label": "Compilar «linea-adicional»",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make.exe",
+            },
+            "args": [
+                "linea-adicional"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+        },
+        {
+            "label": "Ejecutar «linea-adicional»",
+            "type": "shell",
+            "command": "./linea-adicional",
+            "windows": {
+                "command": "chcp 65001 ; .\\linea-adicional.exe",
+            },
+            "dependsOn": "Compilar «linea-adicional»",
+            "problemMatcher": ["$gcc"],
+        },
+        {
+            "label": "Compilar «acceso-directo»",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make.exe",
+            },
+            "args": [
+                "acceso-directo"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+        },
+        {
+            "label": "Ejecutar «acceso-directo»",
+            "type": "shell",
+            "command": "./acceso-directo",
+            "windows": {
+                "command": "chcp 65001 ; .\\acceso-directo.exe",
+            },
+            "dependsOn": "Compilar «acceso-directo»",
+            "problemMatcher": ["$gcc"],
+        },
+        {
+            "label": "Compilar «lectura-escritura»",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make.exe",
+            },
+            "args": [
+                "lectura-escritura"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+        },
+        {
+            "label": "Ejecutar «lectura-escritura»",
+            "type": "shell",
+            "command": "./lectura-escritura",
+            "windows": {
+                "command": "chcp 65001 ; .\\lectura-escritura.exe",
+            },
+            "dependsOn": "Compilar «lectura-escritura»",
+            "problemMatcher": ["$gcc"],
+        },
+    ],
+    "version": "2.0.0"
+}

@@ -1,13 +1,26 @@
-﻿/********************************************************************************\
+﻿/******************************************************************************\
  * Curso de Programación 1. Tema 16 (acceso directo)
  * Autores: Miguel Ángel Latre
  * Última revisión: 13 de diciembre de 2019
  * Resumen: Función que utiliza acceso directo en un fichero en lugar de acceso
- *          secuancial (se presenta también una versión que usa acceso secuencial)
- * Codificación de caracteres original de este fichero: UTF-8 con BOM
-\********************************************************************************/
+ *          secuencial (se presenta también una versión que usa acceso 
+ *          secuencial)
+ * Nota: El código de este programa está repartido en varios módulos.
+ *       Para compilarlo, hay que ejecutar el comando
+ *           make acceso-directo
+ *       o, en Windows,
+ *           mingw32-make acceso-directo
+ *       o ejecutar la tarea "Compilar «acceso-directo»" de VSC.
+ * 
+ *       Para ejecutarlo, una vez compilado, hay que ejecutar el comando
+ *           ./acceso-directo
+ *       o, en Windows,
+ *           .\acceso-directo.exe
+ *       o ejecutar la tarea "Ejecutar «acceso-directo»" de VSC.
+\******************************************************************************/
 #include <iostream>
 #include <fstream>
+#include "fichero-primos.hpp"
 using namespace std;
 
 
@@ -19,11 +32,11 @@ using namespace std;
  *       escrito un mensaje de error en «cerr» y ha devuelto un valor negativo.
  * Nota: Versión secuencial de la función
  */
-int leerUnPrimo_secuencial(const char nombreFichero[], int i) {
+int leerUnPrimo_secuencial(const string nombreFichero, const unsigned int i) {
     ifstream f(nombreFichero, ios::binary);
     if (f.is_open()) {
         int primo;
-        for(int j = 1; j <= i; j++) {
+        for(unsigned int j = 1; j <= i; j++) {
             f.read(reinterpret_cast<char*>(&primo), sizeof(primo));
         }
         f.close();
@@ -46,7 +59,7 @@ int leerUnPrimo_secuencial(const char nombreFichero[], int i) {
  *       escrito un mensaje de error en «cerr» y ha devuelto un valor negativo.
  * Nota: Versión de la función que utiliza acceso directo.
  */
-int leerUnPrimo(const char nombreFichero[], int i) {
+int leerUnPrimo(const string nombreFichero, const unsigned int i) {
     ifstream f(nombreFichero, ios::binary);
     if (f.is_open()) {
         f.seekg((i - 1) * sizeof(int));
@@ -68,8 +81,9 @@ int leerUnPrimo(const char nombreFichero[], int i) {
  * milésimo número primo (7919).
  */
 int main() {
-    const char NOMBRE_FICHERO[] = "../../../tema-15-ficheros-binarios/creacion-fichero-primos/primos.dat";
-    cout << leerUnPrimo(NOMBRE_FICHERO, 1000) << endl;
+    asegurarFicheroPrimos(NOMBRE_FICHERO_PRIMOS, NUM_PRIMOS);
+    cout << "Milésimo número primo: " 
+         << leerUnPrimo(NOMBRE_FICHERO_PRIMOS, 1000) << endl;
     return 0;
 }
 

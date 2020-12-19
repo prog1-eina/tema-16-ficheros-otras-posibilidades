@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "Programación 1",
+            "includePath": [
+                "${workspaceFolder}/../practica3/calculadora/src/**"
+            ]
+        }
+    ],
+    "version": 4
+}
