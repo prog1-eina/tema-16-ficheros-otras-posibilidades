@@ -5,26 +5,25 @@
     "version": "0.2.0",
     "configurations": [
         {
-            {
-                "name": "Depurar «linea-adicional»",
-                "type": "cppdbg",
-                "request": "launch",
-                "program": "${workspaceFolder}/./linea-adicional",
-                "args": [],
-                "stopAtEntry": false,
-                "cwd": "${workspaceFolder}",
-                "environment": [],
-                "externalConsole": true,
-                "MIMode": "gdb",
-                "setupCommands": [
-                    {
-                        "description": "Enable pretty-printing for gdb",
-                        "text": "-enable-pretty-printing",
-                        "ignoreFailures": true
-                    }
-                ],
-                "preLaunchTask": "Compilar «linea-adicional»"
-            },
+            "name": "Depurar «linea-adicional»",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/./linea-adicional",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Compilar «linea-adicional»"
+        },
         {
             "name": "Depurar «acceso-directo»",
             "type": "cppdbg",
