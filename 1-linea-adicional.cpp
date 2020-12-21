@@ -92,7 +92,7 @@ void unaLineaAdicional(const string nombreFichero, const string linea) {
  *       final del fichero "1-linea-adicional.cpp".
  */
 int main() {
-   unaLineaAdicional("1-linea-adicional.cpp",
+    unaLineaAdicional("1-linea-adicional.cpp",
                      "// Función «unaLineaAdicional» probada");
     return 0;
 }
