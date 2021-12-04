@@ -32,12 +32,12 @@ using namespace std;
  *       escrito un mensaje de error en «cerr» y ha devuelto un valor negativo.
  * Nota: Versión secuencial de la función
  */
-unsigned int leerUnPrimo_secuencial(const string nombreFichero, 
-                                    const unsigned int i) {
+unsigned leerUnPrimo_secuencial(const string nombreFichero, 
+                                    const unsigned i) {
     ifstream f(nombreFichero, ios::binary);
     if (f.is_open()) {
-        unsigned int primo;
-        for(unsigned int j = 1; j <= i; j++) {
+        unsigned primo;
+        for(unsigned j = 1; j <= i; j++) {
             f.read(reinterpret_cast<char*>(&primo), sizeof(primo));
         }
         f.close();
@@ -60,11 +60,11 @@ unsigned int leerUnPrimo_secuencial(const string nombreFichero,
  *       escrito un mensaje de error en «cerr» y ha devuelto un valor negativo.
  * Nota: Versión de la función que utiliza acceso directo.
  */
-unsigned int leerUnPrimo(const string nombreFichero, const unsigned int i) {
+unsigned leerUnPrimo(const string nombreFichero, const unsigned i) {
     ifstream f(nombreFichero, ios::binary);
     if (f.is_open()) {
-        f.seekg((i - 1) * sizeof(unsigned int));
-        unsigned int primo;
+        f.seekg((i - 1) * sizeof(unsigned));
+        unsigned primo;
         f.read(reinterpret_cast<char*>(&primo), sizeof(primo));
         f.close();
         return primo;

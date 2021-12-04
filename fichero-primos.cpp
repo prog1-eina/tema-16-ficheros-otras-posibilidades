@@ -3,7 +3,7 @@
 #include "calculos.hpp"
 using namespace std;
 
-const unsigned int NUM_PRIMOS = 10000;
+const unsigned NUM_PRIMOS = 10000;
 const string NOMBRE_FICHERO_PRIMOS = "primos.dat";
 
 
@@ -12,14 +12,14 @@ const string NOMBRE_FICHERO_PRIMOS = "primos.dat";
  * Post: Ha creado un fichero denominado «nombreFichero» con los primeros «n»
  *       números primos.
  */
-void crearFicheroPrimos(const string nombreFichero, const unsigned int n) {
+void crearFicheroPrimos(const string nombreFichero, const unsigned n) {
     ofstream f;
     f.open(nombreFichero, ios::binary);
     if (f.is_open()) {
-        unsigned int p = 2;
+        unsigned p = 2;
         f.write(reinterpret_cast<const char*>(&p), sizeof(p));  
         p = 3; 
-        unsigned int i = 1;             
+        unsigned i = 1;             
         while (i < n) {
             if (esPrimo(p)) {
                 f.write(reinterpret_cast<const char*>(&p), sizeof(p));  
@@ -43,7 +43,7 @@ void crearFicheroPrimos(const string nombreFichero, const unsigned int n) {
  *       «nombreFichero» con los primeros «n» números primos. 
  */
 void asegurarFicheroPrimos(const string nombreFichero, 
-                           const unsigned int numPrimos) {
+                           const unsigned numPrimos) {
     ifstream f(nombreFichero);
     if (f.is_open()) {
         f.close();

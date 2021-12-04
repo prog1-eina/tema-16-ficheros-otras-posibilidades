@@ -4,17 +4,15 @@
  * Última revisión: 19 de diciembre de 2020
  * Resumen: Función que inserta al final de un fichero de texto una línea
  *          adicional (versión usando y sin usar el modo «append»).
- * Nota: El código de este programa está repartido en varios módulos.
- *       Para compilarlo, hay que ejecutar el comando
- *           make linea-adicional
- *       o, en Windows,
- *           mingw32-make linea-adicional
- *       o ejecutar la tarea "Compilar «linea-adicional»" de VSC.
- * 
- *       Para ejecutarlo, una vez compilado, hay que ejecutar el comando
- *           ./linea-adicional
- *       o, en Windows,
- *           .\linea-adicional.exe
+ * Nota: El programa completo está contenido en este fichero, por lo que puede 
+ *       compilarse y ejecutarse con la extensión Code Runner de Visual Studio 
+ *       Code.
+ *       También puede compilarse desde la terminal través de la orden
+ *           g++ -Wall -Wextra 1-linea-adicional.cpp -o 1-linea-adicional
+ *       y ejecutarse en Windows a través de la orden
+ *           .\1-linea-adicional.exe
+ *       o en Linux y macOS
+ *           ./1-linea-adicional
  *       o ejecutar la tarea "Ejecutar «linea-adicional»" de VSC.
 \******************************************************************************/
 
@@ -40,10 +38,8 @@ void unaLineaAdicional_sinModoAppend(const string nombreFichero,
         fTemporal.open(FICHERO_TEMPORAL);
         if (fTemporal.is_open()) {
             char c;
-            fOriginal.get(c);
-            while (!fOriginal.eof()) {
+            while (fOriginal.get(c)) {
                 fTemporal.put(c);
-                fOriginal.get(c);
             }
             fTemporal << linea << endl;
             fTemporal.close();

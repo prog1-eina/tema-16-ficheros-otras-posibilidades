@@ -36,8 +36,8 @@ void agregarSiguientePrimo(const string nombreFichero) {
     fstream f;
     f.open(nombreFichero, ios::binary | ios::in | ios::out );
     if (f.is_open()) {
-        f.seekg(-1 * int(sizeof(unsigned int)), ios_base::end);
-        unsigned int primo;
+        f.seekg(-1 * int(sizeof(unsigned)), ios_base::end);
+        unsigned primo;
         f.read(reinterpret_cast<char*>(&primo), sizeof(primo));
         cout << "Último primo del fichero: " << primo << endl;
         

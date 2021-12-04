@@ -1,7 +1,7 @@
 #include <string>
 using namespace std;
 
-const unsigned int NUM_PRIMOS = 1000;
+const unsigned NUM_PRIMOS = 1000;
 const string NOMBRE_FICHERO_PRIMOS = "primos.dat";
 
 /*
@@ -11,4 +11,4 @@ const string NOMBRE_FICHERO_PRIMOS = "primos.dat";
  *       «nombreFichero» con los primeros «n» números primos. 
  */
 void asegurarFicheroPrimos(const string nombreFichero, 
-                           const unsigned int numPrimos);
+                           const unsigned numPrimos);
