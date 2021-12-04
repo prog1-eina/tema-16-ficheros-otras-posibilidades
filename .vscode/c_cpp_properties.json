@@ -3,7 +3,7 @@
         {
             "name": "Programación 1",
             "includePath": [
-                "${workspaceFolder}/../practica3/calculadora/src/**"
+                "${workspaceFolder}/../practica3/src/calculadora/**"
             ]
         }
     ],
