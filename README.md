@@ -47,7 +47,7 @@ o, en Windows,
 ```
 
 o ejecutar la tarea ``Compilar «acceso-directo»`` de VSC.
- 
+
 Para ejecutarlo, una vez compilado, hay que ejecutar el comando
 
 ```shell
