@@ -27,13 +27,13 @@ OBJECTS_LECTURA_ESCRITURA = $(addprefix $(BUILD_DIR)/, 3-lectura-escritura.o fic
 ## Reglas del fichero «Makefile»
 
 linea-adicional: $(SOURCE_DIR)/1-linea-adicional.cpp
-	$(CXX) -g -o $@ $^ -static
+	$(CXX) -g -o $@ $^
 
 acceso-directo: $(OBJECTS_ACCESO_DIRECTO) 
-	$(CXX) -g -o $@ $^ -static
+	$(CXX) -g -o $@ $^
 
 lectura-escritura: $(OBJECTS_LECTURA_ESCRITURA) 
-	$(CXX) -g -o $@ $^ -static
+	$(CXX) -g -o $@ $^
 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@  
