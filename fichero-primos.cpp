@@ -9,8 +9,7 @@ const string NOMBRE_FICHERO_PRIMOS = "primos.dat";
 
 /*
  * Pre:  ---
- * Post: Ha creado un fichero denominado «nombreFichero» con los primeros «n»
- *       números primos.
+ * Post: Crea un fichero denominado «nombreFichero» con los primeros «n» números primos.
  */
 void crearFicheroPrimos(const string nombreFichero, const unsigned n) {
     ofstream f;

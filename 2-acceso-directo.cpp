@@ -27,9 +27,9 @@ using namespace std;
 /*
  * Pre:  El fichero de nombre «nombreFichero» almacena al menos los primeros
  *       «i» números primos, almacenados en orden ascendente.
- * Post: Ha devuelto el «i»-ésimo (comenzando a contar por 1) número primo, 
- *       según el contenido del fichero. Si no se ha podido abrir el fichero, ha
- *       escrito un mensaje de error en «cerr» y ha devuelto un valor negativo.
+ * Post: Devuelve el «i»-ésimo (comenzando a contar por 1) número primo, 
+ *       según el contenido del fichero. Si no se puede abrir el fichero, escribe 
+ *       un mensaje de error en «cerr» y devuelve un valor negativo.
  * Nota: Versión secuencial de la función
  */
 unsigned leerUnPrimo_secuencial(const string nombreFichero, 
@@ -55,9 +55,9 @@ unsigned leerUnPrimo_secuencial(const string nombreFichero,
 /*
  * Pre:  El fichero de nombre «nombreFichero» almacena al menos los primeros
  *       «i» números primos, almacenados en orden ascendente.
- * Post: Ha devuelto el «i»-ésimo (comenzando a contar por 1) número primo, 
+ * Post: Devuelve el «i»-ésimo (comenzando a contar por 1) número primo, 
  *       según el contenido del fichero. Si no se ha podido abrir el fichero, ha
- *       escrito un mensaje de error en «cerr» y ha devuelto un valor negativo.
+ *       escrito un mensaje de error en «cerr» y devuelve un valor negativo.
  * Nota: Versión de la función que utiliza acceso directo.
  */
 unsigned leerUnPrimo(const string nombreFichero, const unsigned i) {
