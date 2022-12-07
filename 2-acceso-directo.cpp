@@ -78,13 +78,16 @@ unsigned leerUnPrimo(const string nombreFichero, const unsigned i) {
 }
 
 /*
- * Programa de prueba de la función «leerUnPrimo», que escribe el valor del
- * milésimo número primo (7919).
+ * Programa de prueba de la función «leerUnPrimo».
  */
 int main() {
     asegurarFicheroPrimos(NOMBRE_FICHERO_PRIMOS, NUM_PRIMOS);
-    cout << "Milésimo número primo: " 
-         << leerUnPrimo(NOMBRE_FICHERO_PRIMOS, 1000) << endl;
+    int n;
+    do {
+        cout << "Escriba un número entre 1 y " << NUM_PRIMOS << " (0 para acabar): ";
+        cin >> n;
+        if (1 <= n && n <= int(NUM_PRIMOS))
+        cout << n << "º número primo: " << leerUnPrimo(NOMBRE_FICHERO_PRIMOS, n) << endl;
+    } while (n != 0);
     return 0;
 }
-
