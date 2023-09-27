@@ -46,14 +46,12 @@ void unaLineaAdicional_sinModoAppend(const string nombreFichero,
             fOriginal.close();
             remove(nombreFichero.c_str());
             rename(FICHERO_TEMPORAL.c_str(), nombreFichero.c_str());
-        }
-        else {
+        } else {
         // Escritura de un mensaje de error si no se ha podido abrir el fichero
         cerr << "No se ha podido escribir el fichero \""
              << FICHERO_TEMPORAL << "\"" << endl;
         }
-    }
-    else {
+    } else {
     // Escritura de un mensaje de error si no se ha podido abrir el fichero
     cerr << "No se ha podido leer el fichero \""
          << nombreFichero << "\"" << endl;
@@ -73,8 +71,7 @@ void unaLineaAdicional(const string nombreFichero, const string linea) {
     if (f.is_open()) {
         f << linea << endl;
         f.close();
-    }
-    else {
+    } else {
         // Escritura de un mensaje de error si no se ha podido abrir el fichero
         cerr << "No se ha podido escribir en el fichero \""
             << nombreFichero << "\"" << endl;

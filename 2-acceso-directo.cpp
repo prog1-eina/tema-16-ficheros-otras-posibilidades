@@ -42,8 +42,7 @@ unsigned leerUnPrimo_secuencial(const string nombreFichero,
         }
         f.close();
         return primo;
-    }
-    else {
+    } else {
         // Escritura de un mensaje de error si no se ha podido abrir el fichero
         cerr << "No se ha podido leer el fichero \""
              << nombreFichero << "\"" << endl;
@@ -68,8 +67,7 @@ unsigned leerUnPrimo(const string nombreFichero, const unsigned i) {
         f.read(reinterpret_cast<char*>(&primo), sizeof(primo));
         f.close();
         return primo;
-    }
-    else {
+    } else {
         // Escritura de un mensaje de error si no se ha podido abrir el fichero
         cerr << "No se ha podido leer el fichero \""
              << nombreFichero << "\"" << endl;

@@ -49,8 +49,7 @@ void agregarSiguientePrimo(const string nombreFichero) {
         f.write(reinterpret_cast<const char*>(&primo), sizeof(primo));
         f.close();
         cout << "Agregado el siguiente primo: " << primo << endl;
-    }
-    else {
+    } else {
         // Escritura de un mensaje de error si no se ha podido abrir el fichero
         cerr << "No se ha podido abrir el fichero \""
              << nombreFichero << "\"" << endl;

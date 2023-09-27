@@ -27,8 +27,7 @@ void crearFicheroPrimos(const string nombreFichero, const unsigned n) {
             p += 2;
         }
         f.close();
-    }
-    else {
+    } else {
         cerr << "Error creando el fichero \"" << nombreFichero 
              << "\"." << endl;
     }
@@ -47,8 +46,7 @@ void asegurarFicheroPrimos(const string nombreFichero,
     if (f.is_open()) {
         f.close();
         cout << "\"" << nombreFichero << "\" ya existe. Nada que hacer." << endl;
-    }
-    else {
+    } else {
         crearFicheroPrimos(nombreFichero, numPrimos);
         cout << "Vector con los primeros " << numPrimos << " creado." << endl;
     }
