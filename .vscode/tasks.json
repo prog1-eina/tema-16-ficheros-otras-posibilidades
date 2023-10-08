@@ -10,9 +10,6 @@
             "label": "Compilar «linea-adicional»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make.exe",
-            },
             "args": [
                 "linea-adicional"
             ],
@@ -33,9 +30,6 @@
             "label": "Compilar «acceso-directo»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make.exe",
-            },
             "args": [
                 "acceso-directo"
             ],
@@ -56,9 +50,6 @@
             "label": "Compilar «lectura-escritura»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make.exe",
-            },
             "args": [
                 "lectura-escritura"
             ],
@@ -79,9 +70,6 @@
             "label": "Limpiar resultados de compilación",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make.exe",
-            },
             "args": [
                 "clean"
             ],

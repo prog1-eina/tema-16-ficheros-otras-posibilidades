@@ -4,15 +4,15 @@
  * Última revisión: 19 de diciembre de 2020
  * Resumen: Función que inserta al final de un fichero de texto una línea
  *          adicional (versión usando y sin usar el modo «append»).
- * Nota: El programa completo está contenido en este fichero, por lo que puede 
- *       compilarse y ejecutarse con la extensión Code Runner de Visual Studio 
- *       Code.
- *       También puede compilarse desde la terminal través de la orden
- *           g++ -Wall -Wextra 1-linea-adicional.cpp -o 1-linea-adicional
- *       y ejecutarse en Windows a través de la orden
- *           .\1-linea-adicional.exe
- *       o en Linux y macOS
- *           ./1-linea-adicional
+ * Nota: El programa completo está contenido en este fichero, por lo que puede 
+ *       compilarse y ejecutarse con la extensión Code Runner de Visual Studio 
+ *       Code.
+ *       También puede compilarse desde la terminal través de la orden
+ *           g++ -Wall -Wextra 1-linea-adicional.cpp -o 1-linea-adicional
+ *       y ejecutarse en Windows a través de la orden
+ *           .\1-linea-adicional.exe
+ *       o en Linux y macOS
+ *           ./1-linea-adicional
  *       o ejecutar la tarea "Ejecutar «linea-adicional»" de VSC.
 \******************************************************************************/
 

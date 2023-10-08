@@ -11,19 +11,19 @@ El programa ``linea-adicional`` puede compilarse y ejecutarse con la extensión 
 También puede compilarse desde la terminal través de la orden
 
 ```shell
-    g++ -Wall -Wextra 1-linea-adicional.cpp -o 1-linea-adicional
+    g++ -Wall -Wextra 1-linea-adicional.cpp -o 1-linea-adicional
 ```
 
 Puede ejecutarse en Windows, después de ser compilado, a través de la orden
 
 ```shell
-    .\1-linea-adicional.exe
+    .\1-linea-adicional.exe
 ```
 
 y en Linux o macOS, a través de la orden
 
 ```shell
-    ./1-linea-adicional
+    ./1-linea-adicional
 ```
 
 ### ``2-acceso-directo.cpp`` y ``3-lectura-escritura.cpp``
@@ -38,12 +38,6 @@ Para compilarlo, hay que ejecutar el comando
 
 ```shell
     make acceso-directo
-```
-
-o, en Windows,
-
-```shell
-    mingw32-make acceso-directo
 ```
 
 o ejecutar la tarea ``Compilar «acceso-directo»`` de VSC.
@@ -68,12 +62,6 @@ Para compilarlo, hay que ejecutar el comando
 
 ```shell
     make lectura-escritura
-```
-
-o, en Windows,
-
-```shell
-    mingw32-make lectura-escritura
 ```
 
 o ejecutar la tarea ``Compilar «lectura-escritura»`` de VSC.

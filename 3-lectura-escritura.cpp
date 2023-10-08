@@ -7,9 +7,7 @@
  * Nota: El código de este programa está repartido en varios módulos.
  *       Para compilarlo, hay que ejecutar el comando
  *           make lectura-escritura
- *       o, en Windows,
- *           mingw32-make lectura-escritura
- *       o ejecutar la tarea "Compilar «lectura-escritura»" de VSC.
+  *       o ejecutar la tarea "Compilar «lectura-escritura»" de VSC.
  * 
  *       Para ejecutarlo, una vez compilado, hay que ejecutar el comando
  *           ./lectura-escritura
