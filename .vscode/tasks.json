@@ -21,7 +21,8 @@
             "type": "shell",
             "command": "./linea-adicional",
             "windows": {
-                "command": "chcp 65001 ; .\\linea-adicional.exe",
+                "command": "cmd",
+                "args": ["/c", "chcp 65001 && .\\linea-adicional.exe"]
             },
             "dependsOn": "Compilar «linea-adicional»",
             "problemMatcher": ["$gcc"],
@@ -41,7 +42,8 @@
             "type": "shell",
             "command": "./acceso-directo",
             "windows": {
-                "command": "chcp 65001 ; .\\acceso-directo.exe",
+                "command": "cmd",
+                "args": ["/c", "chcp 65001 && .\\acceso-directo.exe"]
             },
             "dependsOn": "Compilar «acceso-directo»",
             "problemMatcher": ["$gcc"],
@@ -61,7 +63,8 @@
             "type": "shell",
             "command": "./lectura-escritura",
             "windows": {
-                "command": "chcp 65001 ; .\\lectura-escritura.exe",
+                "command": "cmd",
+                "args": ["/c", "chcp 65001 && .\\lectura-escritura.exe"]
             },
             "dependsOn": "Compilar «lectura-escritura»",
             "problemMatcher": ["$gcc"],
