@@ -1,4 +1,4 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Tema 16 (modo «append»)
  * Autores: Miguel Ángel Latre
  * Última revisión: 19 de diciembre de 2020
@@ -14,7 +14,7 @@
  *       o en Linux y macOS
  *           ./1-linea-adicional
  *       o ejecutar la tarea "Ejecutar «linea-adicional»" de VSC.
-\******************************************************************************/
+ *****************************************************************************/
 
 #include <iostream>
 #include <fstream>

@@ -1,4 +1,4 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Tema 16 (acceso directo y modo lectura/escritura)
  * Autores: Miguel Ángel Latre
  * Última revisión: 13 de diciembre de 2019
@@ -14,7 +14,7 @@
  *       o, en Windows,
  *           .\lectura-escritura.exe
  *       o ejecutar la tarea "Ejecutar «lectura-escritura»" de VSC.
-\******************************************************************************/
+ *****************************************************************************/
 
 #include <iostream>
 #include <fstream>

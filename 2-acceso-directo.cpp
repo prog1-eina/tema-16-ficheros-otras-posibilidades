@@ -1,4 +1,4 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Tema 16 (acceso directo)
  * Autores: Miguel Ángel Latre
  * Última revisión: 13 de diciembre de 2019
@@ -15,7 +15,7 @@
  *       o, en Windows,
  *           .\acceso-directo.exe
  *       o ejecutar la tarea "Ejecutar «acceso-directo»" de VSC.
-\******************************************************************************/
+ *****************************************************************************/
 #include <iostream>
 #include <fstream>
 #include "fichero-primos.hpp"
