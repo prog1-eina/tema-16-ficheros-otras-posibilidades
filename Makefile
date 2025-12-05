@@ -16,7 +16,7 @@ VPATH = $(SOURCE_DIR) $(CALCULOS_DIR)
 
 ## COMPILADOR Y OPCIONES DE COMPILACIÓN:
 CXX = g++
-CXXFLAGS = -g -Wall -Wextra -I$(CALCULOS_DIR)
+CXXFLAGS = -Og -Wall -Wextra -I$(CALCULOS_DIR)
 
 
 ## FICHEROS OBJETO (RESULTADOS INTERMEDIOS DE COMPILACIÓN):
@@ -27,13 +27,13 @@ OBJECTS_LECTURA_ESCRITURA = $(addprefix $(BUILD_DIR)/, 3-lectura-escritura.o fic
 ## Reglas del fichero «Makefile»
 
 linea-adicional: $(SOURCE_DIR)/1-linea-adicional.cpp
-	$(CXX) -g -o $@ $^
+	$(CXX) -Og -o $@ $^
 
 acceso-directo: $(OBJECTS_ACCESO_DIRECTO) 
-	$(CXX) -g -o $@ $^
+	$(CXX) -Og -o $@ $^
 
 lectura-escritura: $(OBJECTS_LECTURA_ESCRITURA) 
-	$(CXX) -g -o $@ $^
+	$(CXX) -Og -o $@ $^
 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@  
