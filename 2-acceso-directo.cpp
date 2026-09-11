@@ -1,7 +1,6 @@
 ﻿/******************************************************************************
  * Curso de Programación 1. Tema 16 (acceso directo)
  * Autores: Miguel Ángel Latre
- * Última revisión: 13 de diciembre de 2019
  * Resumen: Función que utiliza acceso directo en un fichero en lugar de acceso
  *          secuencial (se presenta también una versión que usa acceso 
  *          secuencial)

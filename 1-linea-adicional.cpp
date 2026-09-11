@@ -1,7 +1,6 @@
 ﻿/******************************************************************************
  * Curso de Programación 1. Tema 16 (modo «append»)
  * Autores: Miguel Ángel Latre
- * Última revisión: 19 de diciembre de 2020
  * Resumen: Función que inserta al final de un fichero de texto una línea
  *          adicional (versión usando y sin usar el modo «append»).
  * Nota: El programa completo está contenido en este fichero, por lo que puede 

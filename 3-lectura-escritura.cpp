@@ -1,7 +1,6 @@
 ﻿/******************************************************************************
  * Curso de Programación 1. Tema 16 (acceso directo y modo lectura/escritura)
  * Autores: Miguel Ángel Latre
- * Última revisión: 13 de diciembre de 2019
  * Resumen: Función que utiliza acceso directo en un fichero inicializado para
  *          lectura y escritura simultáneas
  * Nota: El código de este programa está repartido en varios módulos.
